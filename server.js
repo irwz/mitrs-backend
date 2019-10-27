@@ -1,8 +1,10 @@
 var express = require('express');
+var cors = require('cors');
 var app = express();
 var router = express.Router();
 var bodyParser = require('body-parser');
 
+app.use(cors());
 app.use(bodyParser.json());
 /*
  * Add middleware. Because we defined the first parameter ( '/api' ), it will run
